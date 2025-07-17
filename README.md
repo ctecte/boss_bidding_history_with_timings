@@ -7,7 +7,7 @@ https://orangepi.tail4dee5c.ts.net
 
 Note that this db only contains data from 2021-22 T2 to 2024-25 T2. Will update once the next round of bidding excel sheet is released
 
-### Explaning the data collection 
+# Explaning the data collection 
 Boss data is collected from BOSS website naturally. There is a download link that leads to a shared file drive allowing active students to download an xlsx of the previous term bids. 
 
 For data that maps section (G1) to the day (FRI 12:00), this is available here on SMU's own website
@@ -17,7 +17,7 @@ You can download the results of current sem and future sems into an excel.
 
 However, the page does not allow you to query past semesters, as it is not selectable in the dropdown. The curl command is how i got around the lack of dropdown option, by directly passing in parameters to query the backend database.
 
-### Curl the SMU website
+# Curl the SMU website
 In case you require past data, refer to the curl smu website txt file
 the last line
 ... &ICAppClsData=^&SIS_CLS_SCHDWRK_STRM=2432^" --output 2432.html 
@@ -35,21 +35,21 @@ The next 2 represent the semester
 Curl it into a html output, and parse it with beautifulsoup. Take note the html you parse will likely be broken, and you should use parser=lxml. Refer to the SMU scrape website py for more info
 The script parses the website and then saves the data into a csv, which can be manipulated with pandas and exported to excel. You can then merge this csv-> excel with the available boss data excel.
 
-### Merging the data with pandas 
+# Merging the data with pandas 
 Nothing to explain, just use Jupyter notebook to see what you're doing
 Make sure you adjust the column names according to your data. 
 
 Ensure you are merging only the same term, then left join on section = section and course_code = course_code
 Could inner join too but just left join 
 
-### Data storage: SQLite3 .db file
+# Data storage: SQLite3 .db file
 Its lightweight and works, aint spinning up a MySQL server docker container for this.
 Pass the excel data into the SQLite database
 
-### Functional website
+# Functional website
 First time using flask to build a website. First time building a website fullstop.
 Followed this tutorial until part 3 https://www.youtube.com/watch?v=QnDWIZuWYW0&t=366s
 
-### I have no idea if this breaks any SMU guidelines or data policies btw
+# I have no idea if this breaks any SMU guidelines or data policies btw
 
 
