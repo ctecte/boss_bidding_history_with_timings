@@ -33,6 +33,7 @@ The first 2 digits represent the year.
 The next 2 represent the semester
 
 2420 is 2024-25 T2
+
 2410 is 2024-25 T1
 
 Curl it into a html output, and parse it with beautifulsoup. Take note the html you parse will likely be broken, and you should use parser=lxml. Refer to the SMU scrape website py for more info
