@@ -1,0 +1,9 @@
+services:
+  web:
+    build: .
+    volumes:
+      - ./flask_website.py:/app/flask_website.py
+      - ./boss_data.db:/app/boss_data.db
+    ports:
+      - "5000:5000"
+    command: "python /app/flask_website.py"
