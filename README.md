@@ -4,6 +4,7 @@ No idea why school doesnt just do this, so ill do it myself for easier reference
 
 # If you just want to use it, visit here
 https://orangepi.tail4dee5c.ts.net
+This is hosted on my personal orange pi zero 3 with tailscale funnel and gunicorn. The Docker compose yml is there for anyone who wants to run this
 
 Note that this db only contains data from 2021-22 T2 to 2024-25 T2. Will update once the next round of bidding excel sheet is released
 
