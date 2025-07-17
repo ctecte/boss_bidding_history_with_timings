@@ -24,6 +24,7 @@ In case you require past data, refer to the curl smu website txt file
 the last line
 ... &ICAppClsData=^&SIS_CLS_SCHDWRK_STRM=2432^" --output 2432.html 
 
+Adjust this line accordingly "...STRM=2432" 
 The 4 digit number represents the year and term. 
 The first 2 digits represent the year. 
 
